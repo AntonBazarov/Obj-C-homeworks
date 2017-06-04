@@ -10,6 +10,7 @@
 #import "ABZCell.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIView *board;
 @property(strong, nonatomic) NSDictionary *cells;
 @end
@@ -18,8 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.board.layer.borderColor = [self borderColor];
+    self.board.layer.borderWidth = 4.f;
+
+
     [self centerBoardAndMakeItSquare];
     [self generateAllCells];
+}
+
+- (CGColorRef)borderColor {
+    return [[UIColor colorWithRed:0.27 green:0.16 blue:0.51 alpha:1.0] CGColor];
+}
+
+- (UIColor *)blackColor {
+    return [UIColor colorWithRed:0.18 green:0.01 blue:0.39 alpha:1.0];
+}
+
+- (UIColor *)whiteColor {
+    return [UIColor colorWithRed:0.80 green:0.80 blue:1.00 alpha:1.0];
 }
 
 - (UIInterfaceOrientation)interfaceOrientation {
@@ -61,11 +78,12 @@
         col = 8;
     }
     CGFloat size = CGRectGetWidth(self.board.frame) / 8;
-    
+
     CGFloat x = (col - 1) * size;
     CGFloat y = (row - 1) * size;
     UIView *cell = [[UIView alloc] initWithFrame:CGRectMake(x, y, size, size)];
-    cell.backgroundColor = ((col + row) % 2) == 0 ? [UIColor blackColor] : [UIColor colorWithRed:1.00 green:1.00 blue:0.80 alpha:1.0];
+    cell.backgroundColor = ((col + row) % 2) == 0 ? [self blackColor] : [self whiteColor]
+            ;
     return cell;
 }
 
