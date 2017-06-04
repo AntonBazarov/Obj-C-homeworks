@@ -13,6 +13,7 @@
 		0CD508731EE458FE003652A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD508711EE458FE003652A2 /* Main.storyboard */; };
 		0CD508751EE458FE003652A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD508741EE458FE003652A2 /* Assets.xcassets */; };
 		0CD508781EE458FE003652A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD508761EE458FE003652A2 /* LaunchScreen.storyboard */; };
+		0CD508811EE45ADB003652A2 /* ABZCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD508801EE45ADB003652A2 /* ABZCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		0CD508741EE458FE003652A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CD508771EE458FE003652A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CD508791EE458FE003652A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CD5087F1EE45ADB003652A2 /* ABZCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABZCell.h; sourceTree = "<group>"; };
+		0CD508801EE45ADB003652A2 /* ABZCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABZCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		0CD508671EE458FE003652A2 /* 22DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
+				0CD5087F1EE45ADB003652A2 /* ABZCell.h */,
+				0CD508801EE45ADB003652A2 /* ABZCell.m */,
 				0CD5086B1EE458FE003652A2 /* AppDelegate.h */,
 				0CD5086C1EE458FE003652A2 /* AppDelegate.m */,
 				0CD5086E1EE458FE003652A2 /* ViewController.h */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD508701EE458FE003652A2 /* ViewController.m in Sources */,
+				0CD508811EE45ADB003652A2 /* ABZCell.m in Sources */,
 				0CD5086D1EE458FE003652A2 /* AppDelegate.m in Sources */,
 				0CD5086A1EE458FE003652A2 /* main.m in Sources */,
 			);
