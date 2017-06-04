@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    ABZCellColorBlack,
+    ABZCellColorWhite
+}ABZCellColor;
+
 @interface ABZCell : UIView
 
 @property(assign, nonatomic) NSInteger index;
 @property(strong,nonatomic) UIView *view;
+@property(assign, nonatomic) ABZCellColor color;
+
 
 
 -(BOOL)isPointInside:(CGPoint) point;
