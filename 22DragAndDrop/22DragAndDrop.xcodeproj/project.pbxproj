@@ -315,6 +315,7 @@
 				0CD5087E1EE458FE003652A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

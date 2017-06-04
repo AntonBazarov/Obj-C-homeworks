@@ -18,22 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self centerBoardAndMakeItSquare];
     [self generateAllCells];
-    
 }
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
+    [self centerBoardAndMakeItSquare];
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
+
+
+- (UIInterfaceOrientation)interfaceOrientation {
+    return (UIInterfaceOrientation) UIInterfaceOrientationMaskAll;
+}
+
+- (void)centerBoardAndMakeItSquare {
     CGFloat width = self.view.frame.size.width;
     CGFloat height =  self.view.frame.size.height;
     CGFloat size = (width < height) ? width : height;
     CGFloat margin = 16.f;
     self.board.frame = CGRectMake(0, 0, size - margin, size - margin);
     self.board.center = self.view.center;
-    
 }
-// сделать доску квадратной, что бы влазила во селф.вью
-// сделать доску по центру
-// при попороте все повторить
 
 -(void)generateAllCells{
     NSMutableDictionary *cells = [NSMutableDictionary dictionary];
@@ -55,7 +61,7 @@
     } else {
         col = 8;
     }
-    CGFloat size = self.board.bounds.size.width / 8.f;
+    CGFloat size = CGRectGetWidth(self.board.frame) / 8;
     
     CGFloat x = (col - 1) * size;
     CGFloat y = (row - 1) * size;
