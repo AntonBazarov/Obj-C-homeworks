@@ -22,14 +22,13 @@
     [self generateAllCells];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
-    [self centerBoardAndMakeItSquare];
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-}
-
-
 - (UIInterfaceOrientation)interfaceOrientation {
     return (UIInterfaceOrientation) UIInterfaceOrientationMaskAll;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self centerBoardAndMakeItSquare];
 }
 
 - (void)centerBoardAndMakeItSquare {
