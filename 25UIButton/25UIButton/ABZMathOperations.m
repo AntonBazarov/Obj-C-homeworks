@@ -15,7 +15,7 @@
         CGFloat op2 = [operand2 floatValue];
         CGFloat result = [self mathOperationWithFloatValueOne:op1 valueTwo:op2 operation:operation];
         if (result == NSNotFound) {
-            self.operand1 = @"Нельзя так бро)";
+            self.operand1 = @"Серьезно?:)";
         } else {
             self.operand1 = [NSString stringWithFormat:@"%1.1f", result];
         }

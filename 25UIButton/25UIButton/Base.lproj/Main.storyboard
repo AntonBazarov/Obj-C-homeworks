@@ -202,7 +202,7 @@
                                     <color key="titleColor" red="0.37789100339999998" green="0.66951336100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.3098284577" green="0.3659706392" blue="0.87850560899999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" title="−">
                                     <color key="titleColor" red="0.3916212248" green="0.065357592280000001" blue="0.83808724830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.4346416152" green="0.63591674030000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -260,7 +260,6 @@
                                 </state>
                                 <connections>
                                     <action selector="fractionaryNumberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYu-hf-Uah"/>
-                                    <action selector="pushButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbd-7H-4Ct"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-hX-I35">

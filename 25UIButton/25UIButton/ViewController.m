@@ -58,7 +58,9 @@
     NSString *number = sender.currentTitle;
     NSString *currentTitle = self.resultLabel.text;
     if (self.userIsInTheMiddleOfTyping) {
-        self.resultLabel.text = [currentTitle stringByAppendingString:number];
+        if (currentTitle.length != 1 && ![currentTitle isEqualToString:@"0"]) {
+            self.resultLabel.text = [currentTitle stringByAppendingString:number];
+        }
     } else {
         self.resultLabel.text = number;
         
@@ -73,6 +75,11 @@
 }
 
 - (IBAction)fractionaryNumberAction:(UIButton *)sender {
+    NSString *number = sender.currentTitle;
+    NSString *currentTitle = self.resultLabel.text;
+    if(![currentTitle isEqualToString:@""] && [self symbolIsFoundInString:self.resultLabel.text symbol:@"."] == NO) {
+        self.resultLabel.text = [currentTitle stringByAppendingString:number];
+    }
 }
 
 - (IBAction)mathOperationAction:(UIButton *)sender {
@@ -80,7 +87,7 @@
         self.operation.mathOperation = ABZMathOperationAddition;
         self.operation.operand1 = self.resultLabel.text;
         self.resultLabel.text = @"";
-    } else if ([sender.currentTitle isEqualToString:@"-"]) {
+    } else if ([sender.currentTitle isEqualToString:@"−"]) {
         self.operation.mathOperation = ABZMathOperationSubtraction;
         self.operation.operand1 = self.resultLabel.text;
         self.resultLabel.text = @"";
@@ -104,6 +111,15 @@
             self.resultLabel.text = self.operation.operand1;
         }
     }
+}
+
+
+-(BOOL)symbolIsFoundInString:(NSString *) string symbol:(NSString *) symbol{
+    NSRange range = [string rangeOfString:symbol];
+    if (range.location != NSNotFound) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
