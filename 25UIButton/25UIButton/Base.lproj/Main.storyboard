@@ -233,11 +233,11 @@
                                 <color key="backgroundColor" red="0.8664158843403692" green="0.060854160339265828" blue="1" alpha="0.22090517238275864" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="43"/>
                                 <color key="tintColor" red="0.69505923317665796" green="0.048818641007743961" blue="0.80222355769230769" alpha="0.166891163762069" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="EQUALLY">
+                                <state key="normal" title="=">
                                     <color key="titleColor" red="0.37789100339999998" green="0.66951336100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.3098284577" green="0.3659706392" blue="0.87850560899999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="highlighted" title="EQALLY">
+                                <state key="highlighted" title="=">
                                     <color key="titleColor" red="0.3916212248" green="0.065357592280000001" blue="0.83808724830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.95526013289070466" green="0.0" blue="1" alpha="0.23057650862068965" colorSpace="calibratedRGB"/>
                                 </state>
@@ -250,7 +250,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31308575160000002" green="0.96099283020000004" blue="1" alpha="0.13297413790000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="43"/>
-                                <state key="normal" title=",">
+                                <state key="normal" title=".">
                                     <color key="titleColor" red="0.37789100339999998" green="0.66951336100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.3098284577" green="0.3659706392" blue="0.87850560899999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -260,6 +260,7 @@
                                 </state>
                                 <connections>
                                     <action selector="fractionaryNumberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYu-hf-Uah"/>
+                                    <action selector="pushButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbd-7H-4Ct"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-hX-I35">
@@ -331,7 +332,6 @@
                         <color key="backgroundColor" red="0.9828485239716761" green="0.98248372555861141" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="equallyButton" destination="QYx-A4-x3A" id="eD6-Vc-dlQ"/>
                         <outlet property="resultLabel" destination="3jZ-Jb-f5d" id="NZA-cc-P3R"/>
                         <outletCollection property="numbersCollection" destination="sf2-NE-XHB" id="nOd-6k-rNg"/>
                         <outletCollection property="numbersCollection" destination="Ml3-V2-JwH" id="wgJ-B2-Y6s"/>
@@ -347,6 +347,7 @@
                         <outletCollection property="mathOperationsCollection" destination="fHG-hb-JoP" id="0ae-3Y-neW"/>
                         <outletCollection property="mathOperationsCollection" destination="38F-Fi-gIF" id="xUX-YP-gR9"/>
                         <outletCollection property="mathOperationsCollection" destination="9ou-hX-I35" id="fE4-Gk-KsW"/>
+                        <outletCollection property="mathOperationsCollection" destination="QYx-A4-x3A" id="euf-dp-cBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

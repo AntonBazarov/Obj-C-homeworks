@@ -11,27 +11,18 @@ typedef enum {
     ABZMathOperationAddition,
     ABZMathOperationMultiplication,
     ABZMathOperationSubtraction,
-    ABZMathOperationDivision
+    ABZMathOperationDivision,
+    ABZMathOperationNone,
+    ABZMathOperationEqual
 }ABZMathOperation;
 
 @interface ABZMathOperations : UIView
 
 @property(assign, nonatomic) ABZMathOperation mathOperation;
+@property(strong, nonatomic) NSString *operand1;
+@property(strong, nonatomic) NSString *operand2;
 
-
--(NSString *)additionOperandFirst:(NSString *) operand1 withOperandTwo:(NSString *) operand2;
--(NSString *)multiplicationOperandFirst:(NSString *) operand1 byOperandTwo:(NSString *) operand2;
--(NSString *)subtractionOperandFirst:(NSString *) operand1 fromOperandTwo:(NSString *) operand2;
--(NSString *)divisionOperandFirst:(NSString *) operand1 byOperandTwo:(NSString *) operand2;
-
-
+-(NSString *)performOperationOperandFirst:(NSString *) operand1 withOperandSecond:(NSString *) operand2 operation:(ABZMathOperation) operation;
 
 @end
-/*
- План по мастеру
 
-
- 
- 7. Создать метод, который по нажатию кнопки (=) будет выполнять одну из выбранных операций
- 8. Установить результат в первое число
-*/

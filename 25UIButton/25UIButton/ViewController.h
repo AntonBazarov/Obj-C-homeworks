@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *numbersCollection;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *mathOperationsCollection;
-@property (weak, nonatomic) IBOutlet UIButton *equallyButton;
 
 
 - (IBAction)pushButtonAction:(UIButton *)sender;
