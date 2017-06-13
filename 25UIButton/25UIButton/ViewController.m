@@ -58,7 +58,9 @@
     NSString *number = sender.currentTitle;
     NSString *currentTitle = self.resultLabel.text;
     if (self.userIsInTheMiddleOfTyping) {
-        if (currentTitle.length != 1 && ![currentTitle isEqualToString:@"0"]) {
+        if (currentTitle.length == 1 && [currentTitle isEqualToString:@"0"]) {
+            self.resultLabel.text = number;
+        } else {
             self.resultLabel.text = [currentTitle stringByAppendingString:number];
         }
     } else {
@@ -101,16 +103,17 @@
         self.resultLabel.text = @"";
     } else if ([sender.currentTitle isEqualToString:@"="]) {
             self.operation.operand2 = self.resultLabel.text;
-        if (self.operation.mathOperation != ABZMathOperationNone) {
-            (self.resultLabel.text = [self.operation
-                                      performOperationOperandFirst:self.operation.operand1
-                                      withOperandSecond:self.operation.operand2
-                                      operation:self.operation.mathOperation]);
+        if (self.operation.mathOperation != ABZMathOperationNone && ![self.operation.operand2 isEqualToString:@""]) {
+           [self setInLabelResulOperation];
             self.operation.mathOperation = ABZMathOperationNone;
-        } else {
-            self.resultLabel.text = self.operation.operand1;
+        } else if (self.operation.mathOperation != ABZMathOperationNone && [self.operation.operand2 isEqualToString:@""]) {
+            self.operation.operand2 = self.operation.operand1;
+            [self setInLabelResulOperation];
+            self.operation.mathOperation = ABZMathOperationNone;
         }
+         self.resultLabel.text = self.operation.operand1;
     }
+   
 }
 
 
@@ -121,5 +124,11 @@
     }
     return NO;
 }
-
+-(void)setInLabelResulOperation {
+    self.resultLabel.text = [self.operation
+                             performOperationOperandFirst:self.operation.operand1
+                             withOperandSecond:self.operation.operand2
+                             operation:self.operation.mathOperation];
+}
 @end
+
